@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/app/components/Navbar";
-import { AuroraBackgroundDemo } from "./components/aurora-background";
+import Navbar from "@/components/Navbar";
+import { AuroraBackgroundDemo } from "@/components/aurora-background";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="realtive w-full flex items-center justify-center">
                     <Navbar />
-                    <AuroraBackgroundDemo/>
+                    {/* <AuroraBackgroundDemo/> */}
         </div>
         
         {children}

@@ -4,7 +4,28 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "./ui/aurora-background";
 import "./typewriter.css";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 export function AuroraBackgroundDemo() {
+    const words = [
+        {
+          text: "Hi",
+        },
+        {
+          text: ",",
+        },
+        {
+          text: " I",
+        },
+        {
+          text: " am",
+        },
+        {
+          text: "Shaik Mahaboob Jani.",
+          className: "text-blue-500 dark:text-blue-500",
+        },
+      ];
+    const text1="Full Stack Developer";
   return (
     <AuroraBackground style={{ width: "100vw", height: "100vh" }}>
       <motion.div
@@ -17,9 +38,9 @@ export function AuroraBackgroundDemo() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className="typewriter">
-  <h1 className="text-white">Hi, I am Shaik Mahaboob jani</h1>
-</div>
+        
+        <TypewriterEffectSmooth words={words} />
+        <TextGenerateEffect words={text1}/>
       </motion.div>
     </AuroraBackground>
   );
